@@ -1,0 +1,160 @@
+{
+  "scenarios": [
+    {
+      "id": "hotel",
+      "name": "Hotel Lobby",
+      "image": "/images/hotel-lobby.png",
+      "description": "Welcome to the hotel lobby! Click on objects to discover treasures.",
+      "treasures": [
+        {
+          "id": "t1",
+          "name": "Reception Desk",
+          "x": 30,
+          "y": 25,
+          "vocabulary": "Check-in / Check-out",
+          "explanation": "Use 'check-in' when arriving at a hotel and 'check-out' when leaving.",
+          "example": "I need to check-in at 3 PM. We will check-out tomorrow morning.",
+          "grammarTopic": "Phrasal Verbs",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t2",
+          "name": "Armchair",
+          "x": 50,
+          "y": 60,
+          "vocabulary": "Comfortable / Cozy",
+          "explanation": "'Comfortable' means pleasant and relaxing. 'Cozy' means warm and intimate.",
+          "example": "This armchair is very comfortable. The lobby is cozy and welcoming.",
+          "grammarTopic": "Adjectives",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t3",
+          "name": "Potted Plant",
+          "x": 75,
+          "y": 40,
+          "vocabulary": "There is / There are",
+          "explanation": "Use 'there is' for singular and 'there are' for plural nouns.",
+          "example": "There is a plant in the corner. There are many plants in the lobby.",
+          "grammarTopic": "Existential Structures",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t4",
+          "name": "Lamp",
+          "x": 20,
+          "y": 45,
+          "vocabulary": "Lighting / Brightness",
+          "explanation": "Describe how bright or dim a space is using these words.",
+          "example": "The lighting in the lobby is warm and soft. The brightness makes it feel welcoming.",
+          "grammarTopic": "Descriptive Vocabulary",
+          "difficulty": "A2"
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "name": "Airport Terminal",
+      "image": "/images/airport-terminal.png",
+      "description": "You're at the airport! Find treasures to learn travel vocabulary.",
+      "treasures": [
+        {
+          "id": "t5",
+          "name": "Departure Board",
+          "x": 50,
+          "y": 20,
+          "vocabulary": "On time / Delayed",
+          "explanation": "'On time' means arriving/departing at the scheduled time. 'Delayed' means late.",
+          "example": "My flight is on time. The departure is delayed by 30 minutes.",
+          "grammarTopic": "Travel Vocabulary",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t6",
+          "name": "Seating Area",
+          "x": 40,
+          "y": 70,
+          "vocabulary": "Wait / Waiting",
+          "explanation": "'Wait' is a verb. 'Waiting' is the present participle or gerund form.",
+          "example": "I'm waiting for my flight. Can you wait here?",
+          "grammarTopic": "Gerunds and Present Participles",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t7",
+          "name": "Window",
+          "x": 85,
+          "y": 50,
+          "vocabulary": "Runway / Gate",
+          "explanation": "A 'runway' is where planes take off and land. A 'gate' is where passengers board.",
+          "example": "The plane is on the runway. We board at gate 5.",
+          "grammarTopic": "Airport Vocabulary",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t8",
+          "name": "Direction Sign",
+          "x": 15,
+          "y": 35,
+          "vocabulary": "Directions / Instructions",
+          "explanation": "Use imperative forms to give directions: 'Go to...', 'Turn left...', 'Follow...'",
+          "example": "Go to the left. Turn right at the sign. Follow the arrows.",
+          "grammarTopic": "Imperative Mood",
+          "difficulty": "A2"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "name": "Cozy Café",
+      "image": "/images/cafe-scene.png",
+      "description": "Relax at the café and discover treasures about daily routines!",
+      "treasures": [
+        {
+          "id": "t9",
+          "name": "Coffee Machine",
+          "x": 25,
+          "y": 30,
+          "vocabulary": "Would like / Can I have",
+          "explanation": "'Would like' is polite for requests. 'Can I have' is also polite and common.",
+          "example": "I would like a coffee, please. Can I have a cappuccino?",
+          "grammarTopic": "Polite Requests",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t10",
+          "name": "Menu Board",
+          "x": 35,
+          "y": 20,
+          "vocabulary": "Recommend / Suggest",
+          "explanation": "'Recommend' and 'suggest' both mean to propose something as good.",
+          "example": "I recommend the chocolate cake. I suggest trying the espresso.",
+          "grammarTopic": "Opinion Verbs",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t11",
+          "name": "Table with Book",
+          "x": 70,
+          "y": 65,
+          "vocabulary": "Spend time / Relax",
+          "explanation": "'Spend time' means to pass time doing something. 'Relax' means to rest.",
+          "example": "I spend time reading here. I relax with a cup of tea.",
+          "grammarTopic": "Leisure Activities",
+          "difficulty": "A2"
+        },
+        {
+          "id": "t12",
+          "name": "Window with Daylight",
+          "x": 80,
+          "y": 40,
+          "vocabulary": "Peaceful / Quiet",
+          "explanation": "'Peaceful' means calm and tranquil. 'Quiet' means with little or no noise.",
+          "example": "The café is peaceful in the morning. It's quiet before noon.",
+          "grammarTopic": "Descriptive Adjectives",
+          "difficulty": "A2"
+        }
+      ]
+    }
+  ]
+}
