@@ -4,9 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Sparkles, Trophy, BookOpen } from "lucide-react";
+import { Sparkles, Trophy, BookOpen, Zap } from "lucide-react";
 import ScenarioMap from "@/components/ScenarioMap";
 import TreasureCard from "@/components/TreasureCard";
+import QuizDialog from "@/components/QuizDialog";
 import { Scenario, Treasure } from "@/lib/types";
 
 export default function Home() {
@@ -17,6 +18,11 @@ export default function Home() {
   );
   const [selectedTreasure, setSelectedTreasure] = useState<Treasure | null>(null);
   const [newlyDiscovered, setNewlyDiscovered] = useState<string | null>(null);
+  const [totalScore, setTotalScore] = useState(0);
+  const [quizOpen, setQuizOpen] = useState(false);
+  const [quizTreasure, setQuizTreasure] = useState<Treasure | null>(null);
+  const [answeredQuizzes, setAnsweredQuizzes] = useState<Set<string>>(new Set());
+  const [scoreAnimation, setScoreAnimation] = useState(false);
 
   useEffect(() => {
     // Load game content from public folder
@@ -37,12 +43,36 @@ export default function Home() {
 
   const handleTreasureClick = (treasure: Treasure) => {
     const isNew = !discoveredTreasures.has(treasure.id);
+    
     if (isNew) {
+      // Mark as discovered
       setDiscoveredTreasures((prev) => new Set([...prev, treasure.id]));
       setNewlyDiscovered(treasure.id);
       setTimeout(() => setNewlyDiscovered(null), 2000);
+
+      // Open quiz for new treasures
+      setQuizTreasure(treasure);
+      setQuizOpen(true);
     }
+
     setSelectedTreasure(treasure);
+  };
+
+  const handleQuizAnswer = (isCorrect: boolean, points: number) => {
+    if (quizTreasure) {
+      setAnsweredQuizzes((prev) => new Set([...prev, quizTreasure.id]));
+      
+      if (isCorrect) {
+        setTotalScore((prev) => prev + points);
+        setScoreAnimation(true);
+        setTimeout(() => setScoreAnimation(false), 600);
+      }
+    }
+  };
+
+  const handleQuizClose = () => {
+    setQuizOpen(false);
+    setQuizTreasure(null);
   };
 
   return (
@@ -67,13 +97,26 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-lato text-muted-foreground">
-                Treasures Found
-              </p>
-              <p className="text-2xl font-playfair font-bold text-accent">
-                {discoveredTreasures.size}/{totalTreasures}
-              </p>
+            <div className="text-right space-y-1">
+              <div>
+                <p className="text-sm font-lato text-muted-foreground">
+                  Treasures Found
+                </p>
+                <p className="text-2xl font-playfair font-bold text-accent">
+                  {discoveredTreasures.size}/{totalTreasures}
+                </p>
+              </div>
+              <motion.div
+                animate={scoreAnimation ? { scale: [1, 1.2, 1] } : {}}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex items-center gap-1 justify-end bg-accent/10 px-2 py-1 rounded">
+                  <Zap className="w-4 h-4 text-accent" />
+                  <span className="text-sm font-bold text-accent font-lato">
+                    {totalScore}
+                  </span>
+                </div>
+              </motion.div>
             </div>
           </div>
 
@@ -144,7 +187,7 @@ export default function Home() {
                   <TabsList className="grid w-full grid-cols-1 gap-2 h-auto">
                     {scenarios.map((scenario) => {
                       const scenarioTreasures = scenario.treasures.filter((t) =>
-                        discoveredTreasures.has(t.id)
+                        Array.from(discoveredTreasures).includes(t.id)
                       );
                       return (
                         <TabsTrigger
@@ -203,6 +246,10 @@ export default function Home() {
                     {totalTreasures - discoveredTreasures.size}
                   </span>
                 </div>
+                <div className="flex justify-between items-center text-sm pt-2 border-t border-accent/20">
+                  <span className="text-muted-foreground">Total Score</span>
+                  <span className="font-bold text-accent text-lg">{totalScore}</span>
+                </div>
                 <div className="pt-2 border-t border-accent/20">
                   <p className="text-xs text-muted-foreground text-center italic">
                     {progressPercentage === 100
@@ -244,7 +291,12 @@ export default function Home() {
                           onClick={() => setSelectedTreasure(treasure)}
                           className="cursor-pointer"
                         >
-                          <TreasureCard {...treasure} />
+                          <TreasureCard
+                            {...treasure}
+                            isNew={
+                              Array.from(answeredQuizzes).includes(treasure.id)
+                            }
+                          />
                         </motion.div>
                       ))
                   )}
@@ -254,6 +306,16 @@ export default function Home() {
           </motion.div>
         )}
       </main>
+
+      {/* Quiz Dialog */}
+      <QuizDialog
+        open={quizOpen}
+        quiz={quizTreasure?.quiz || null}
+        treasureName={quizTreasure?.name || ""}
+        points={quizTreasure?.points || 0}
+        onClose={handleQuizClose}
+        onAnswer={handleQuizAnswer}
+      />
     </div>
   );
 }

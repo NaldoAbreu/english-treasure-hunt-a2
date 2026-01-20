@@ -15,7 +15,19 @@
           "explanation": "Use 'check-in' when arriving at a hotel and 'check-out' when leaving.",
           "example": "I need to check-in at 3 PM. We will check-out tomorrow morning.",
           "grammarTopic": "Phrasal Verbs",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "What do you say when you arrive at a hotel?",
+            "options": [
+              "I need to check-out",
+              "I need to check-in",
+              "I need to check up",
+              "I need to check on"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Check-in' is the correct phrasal verb for arriving at a hotel."
+          }
         },
         {
           "id": "t2",
@@ -26,7 +38,19 @@
           "explanation": "'Comfortable' means pleasant and relaxing. 'Cozy' means warm and intimate.",
           "example": "This armchair is very comfortable. The lobby is cozy and welcoming.",
           "grammarTopic": "Adjectives",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Which word describes a warm, intimate feeling?",
+            "options": [
+              "Comfortable",
+              "Cozy",
+              "Soft",
+              "Relaxing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Cozy' specifically means warm and intimate, while 'comfortable' is more general."
+          }
         },
         {
           "id": "t3",
@@ -37,7 +61,19 @@
           "explanation": "Use 'there is' for singular and 'there are' for plural nouns.",
           "example": "There is a plant in the corner. There are many plants in the lobby.",
           "grammarTopic": "Existential Structures",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Complete: '_____ three plants in the lobby.'",
+            "options": [
+              "There is",
+              "There are",
+              "It is",
+              "They are"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Use 'there are' with plural nouns. 'Three plants' is plural."
+          }
         },
         {
           "id": "t4",
@@ -48,7 +84,19 @@
           "explanation": "Describe how bright or dim a space is using these words.",
           "example": "The lighting in the lobby is warm and soft. The brightness makes it feel welcoming.",
           "grammarTopic": "Descriptive Vocabulary",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "What does 'warm lighting' suggest?",
+            "options": [
+              "Very bright and harsh",
+              "Cozy and welcoming",
+              "Dark and gloomy",
+              "Cold and clinical"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Warm lighting creates a cozy and welcoming atmosphere."
+          }
         }
       ]
     },
@@ -67,7 +115,19 @@
           "explanation": "'On time' means arriving/departing at the scheduled time. 'Delayed' means late.",
           "example": "My flight is on time. The departure is delayed by 30 minutes.",
           "grammarTopic": "Travel Vocabulary",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "If a flight leaves at 10:00 AM and it's now 10:00 AM, the flight is ___.",
+            "options": [
+              "delayed",
+              "on time",
+              "early",
+              "cancelled"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'On time' means the flight is leaving at the scheduled time."
+          }
         },
         {
           "id": "t6",
@@ -78,7 +138,19 @@
           "explanation": "'Wait' is a verb. 'Waiting' is the present participle or gerund form.",
           "example": "I'm waiting for my flight. Can you wait here?",
           "grammarTopic": "Gerunds and Present Participles",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Which sentence is correct?",
+            "options": [
+              "I wait for my flight.",
+              "I am waiting for my flight.",
+              "Both are correct",
+              "Neither is correct"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Both are correct. 'I wait' is simple present, 'I am waiting' is present continuous."
+          }
         },
         {
           "id": "t7",
@@ -89,7 +161,19 @@
           "explanation": "A 'runway' is where planes take off and land. A 'gate' is where passengers board.",
           "example": "The plane is on the runway. We board at gate 5.",
           "grammarTopic": "Airport Vocabulary",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Where do passengers board the plane?",
+            "options": [
+              "On the runway",
+              "At the gate",
+              "In the terminal",
+              "On the tarmac"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Passengers board at the gate, not on the runway."
+          }
         },
         {
           "id": "t8",
@@ -100,7 +184,19 @@
           "explanation": "Use imperative forms to give directions: 'Go to...', 'Turn left...', 'Follow...'",
           "example": "Go to the left. Turn right at the sign. Follow the arrows.",
           "grammarTopic": "Imperative Mood",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Which is an imperative sentence?",
+            "options": [
+              "You go to the gate.",
+              "Go to the gate.",
+              "He goes to the gate.",
+              "Going to the gate."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Imperative sentences give commands or instructions without a subject."
+          }
         }
       ]
     },
@@ -119,7 +215,19 @@
           "explanation": "'Would like' is polite for requests. 'Can I have' is also polite and common.",
           "example": "I would like a coffee, please. Can I have a cappuccino?",
           "grammarTopic": "Polite Requests",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Which is the most polite way to order coffee?",
+            "options": [
+              "Give me coffee.",
+              "I want coffee.",
+              "I would like a coffee, please.",
+              "Coffee now."
+            ],
+            "correctAnswer": 2,
+            "explanation": "'I would like a coffee, please' is the most polite and formal way to order."
+          }
         },
         {
           "id": "t10",
@@ -130,7 +238,19 @@
           "explanation": "'Recommend' and 'suggest' both mean to propose something as good.",
           "example": "I recommend the chocolate cake. I suggest trying the espresso.",
           "grammarTopic": "Opinion Verbs",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "What does 'I recommend this cake' mean?",
+            "options": [
+              "I don't like this cake.",
+              "I think this cake is good.",
+              "This cake is expensive.",
+              "This cake is new."
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Recommend' means you think something is good and worth trying."
+          }
         },
         {
           "id": "t11",
@@ -141,7 +261,19 @@
           "explanation": "'Spend time' means to pass time doing something. 'Relax' means to rest.",
           "example": "I spend time reading here. I relax with a cup of tea.",
           "grammarTopic": "Leisure Activities",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Complete: 'I like to _____ time at the café reading.'",
+            "options": [
+              "pass",
+              "spend",
+              "take",
+              "have"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Spend time' is the correct collocation for passing time doing an activity."
+          }
         },
         {
           "id": "t12",
@@ -152,7 +284,19 @@
           "explanation": "'Peaceful' means calm and tranquil. 'Quiet' means with little or no noise.",
           "example": "The café is peaceful in the morning. It's quiet before noon.",
           "grammarTopic": "Descriptive Adjectives",
-          "difficulty": "A2"
+          "difficulty": "A2",
+          "points": 10,
+          "quiz": {
+            "question": "Which word means 'calm and tranquil'?",
+            "options": [
+              "Quiet",
+              "Peaceful",
+              "Silent",
+              "Soft"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Peaceful' specifically means calm and tranquil, suggesting a sense of harmony."
+          }
         }
       ]
     }

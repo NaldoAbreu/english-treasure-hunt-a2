@@ -1,3 +1,15 @@
+export interface QuizOption {
+  text: string;
+  isCorrect: boolean;
+}
+
+export interface Quiz {
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
 export interface Treasure {
   id: string;
   name: string;
@@ -8,6 +20,8 @@ export interface Treasure {
   example: string;
   grammarTopic: string;
   difficulty: string;
+  points: number;
+  quiz: Quiz;
 }
 
 export interface Scenario {
