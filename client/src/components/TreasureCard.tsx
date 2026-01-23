@@ -1,87 +1,94 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Volume2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Treasure } from "@/lib/types";
 
 interface TreasureCardProps {
-  id: string;
-  name: string;
-  vocabulary: string;
-  explanation: string;
-  example: string;
-  grammarTopic: string;
-  difficulty: string;
-  isNew?: boolean;
+  treasure: Treasure;
+  isDiscovered: boolean;
+  onSpeak: () => void;
+  isSpeaking: boolean;
 }
 
 export default function TreasureCard({
-  id,
-  name,
-  vocabulary,
-  explanation,
-  example,
-  grammarTopic,
-  difficulty,
-  isNew = false,
+  treasure,
+  isDiscovered,
+  onSpeak,
+  isSpeaking,
 }: TreasureCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
+      className="w-full"
     >
-      <Card className="bg-card border-2 border-accent/20 hover:border-accent/50 transition-colors">
-        <CardHeader className="pb-3">
-          <div className="flex items-start justify-between gap-2">
-            <div className="flex items-start gap-2 flex-1">
-              {isNew && (
-                <motion.div
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <Sparkles className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                </motion.div>
-              )}
-              <div className="flex-1">
-                <CardTitle className="text-lg font-playfair text-foreground">
-                  {name}
-                </CardTitle>
-                <p className="text-sm text-muted-foreground mt-1 font-lato">
-                  {vocabulary}
-                </p>
-              </div>
+      <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-lg p-6 shadow-md">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-center gap-3">
+            {isDiscovered && (
+              <motion.div
+                initial={{ rotate: -180, scale: 0 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <Sparkles className="w-6 h-6 text-amber-600" />
+              </motion.div>
+            )}
+            <div>
+              <h3 className="text-xl font-bold text-amber-900">{treasure.name}</h3>
+              <p className="text-sm text-amber-700">{treasure.grammarTopic}</p>
             </div>
-            <Badge variant="outline" className="text-xs whitespace-nowrap">
-              {grammarTopic}
-            </Badge>
           </div>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="bg-secondary/30 p-3 rounded-md">
-            <p className="text-sm text-foreground font-lato leading-relaxed">
-              {explanation}
-            </p>
+          <Badge className="bg-amber-600 text-white">{treasure.difficulty}</Badge>
+        </div>
+
+        <div className="space-y-4">
+          {/* Vocabulary */}
+          <div>
+            <label className="text-sm font-semibold text-amber-900 block mb-1">
+              Vocabulary
+            </label>
+            <div className="flex items-center gap-2">
+              <p className="text-base text-amber-800 font-medium">{treasure.vocabulary}</p>
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={onSpeak}
+                disabled={isSpeaking}
+                className="text-amber-600 hover:bg-amber-100"
+              >
+                <Volume2 className={`w-4 h-4 ${isSpeaking ? "animate-pulse" : ""}`} />
+              </Button>
+            </div>
           </div>
 
-          <div className="border-l-4 border-accent pl-3">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+          {/* Explanation */}
+          <div>
+            <label className="text-sm font-semibold text-amber-900 block mb-1">
+              Explanation
+            </label>
+            <p className="text-sm text-amber-800 leading-relaxed">{treasure.explanation}</p>
+          </div>
+
+          {/* Example */}
+          <div>
+            <label className="text-sm font-semibold text-amber-900 block mb-1">
               Example
-            </p>
-            <p className="text-sm text-foreground italic font-lato mt-1">
-              "{example}"
-            </p>
+            </label>
+            <blockquote className="text-sm text-amber-700 italic border-l-4 border-amber-400 pl-3 py-1">
+              "{treasure.example}"
+            </blockquote>
           </div>
 
-          <div className="flex items-center gap-2 pt-2">
-            <span className="text-xs font-semibold text-muted-foreground">
-              Level:
-            </span>
-            <Badge className="bg-accent/20 text-accent hover:bg-accent/30">
-              {difficulty}
-            </Badge>
+          {/* Points */}
+          <div className="bg-white/50 rounded-lg p-3 flex items-center justify-between">
+            <span className="text-sm font-semibold text-amber-900">Points</span>
+            <span className="text-lg font-bold text-amber-600">+{treasure.points}</span>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </motion.div>
   );
 }

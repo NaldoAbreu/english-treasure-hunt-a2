@@ -21,6 +21,7 @@ export interface Treasure {
   grammarTopic: string;
   difficulty: string;
   points: number;
+  pronunciation: string;
   quiz: Quiz;
 }
 

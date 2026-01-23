@@ -17,6 +17,7 @@
           "grammarTopic": "Phrasal Verbs",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "check-in",
           "quiz": {
             "question": "What do you say when you arrive at a hotel?",
             "options": [
@@ -40,6 +41,7 @@
           "grammarTopic": "Adjectives",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "comfortable",
           "quiz": {
             "question": "Which word describes a warm, intimate feeling?",
             "options": [
@@ -63,6 +65,7 @@
           "grammarTopic": "Existential Structures",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "there are",
           "quiz": {
             "question": "Complete: '_____ three plants in the lobby.'",
             "options": [
@@ -86,6 +89,7 @@
           "grammarTopic": "Descriptive Vocabulary",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "lighting",
           "quiz": {
             "question": "What does 'warm lighting' suggest?",
             "options": [
@@ -117,6 +121,7 @@
           "grammarTopic": "Travel Vocabulary",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "on time",
           "quiz": {
             "question": "If a flight leaves at 10:00 AM and it's now 10:00 AM, the flight is ___.",
             "options": [
@@ -140,6 +145,7 @@
           "grammarTopic": "Gerunds and Present Participles",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "waiting",
           "quiz": {
             "question": "Which sentence is correct?",
             "options": [
@@ -163,6 +169,7 @@
           "grammarTopic": "Airport Vocabulary",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "runway",
           "quiz": {
             "question": "Where do passengers board the plane?",
             "options": [
@@ -186,6 +193,7 @@
           "grammarTopic": "Imperative Mood",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "directions",
           "quiz": {
             "question": "Which is an imperative sentence?",
             "options": [
@@ -217,6 +225,7 @@
           "grammarTopic": "Polite Requests",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "would like",
           "quiz": {
             "question": "Which is the most polite way to order coffee?",
             "options": [
@@ -240,6 +249,7 @@
           "grammarTopic": "Opinion Verbs",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "recommend",
           "quiz": {
             "question": "What does 'I recommend this cake' mean?",
             "options": [
@@ -263,6 +273,7 @@
           "grammarTopic": "Leisure Activities",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "spend time",
           "quiz": {
             "question": "Complete: 'I like to _____ time at the café reading.'",
             "options": [
@@ -286,6 +297,7 @@
           "grammarTopic": "Descriptive Adjectives",
           "difficulty": "A2",
           "points": 10,
+          "pronunciation": "peaceful",
           "quiz": {
             "question": "Which word means 'calm and tranquil'?",
             "options": [
